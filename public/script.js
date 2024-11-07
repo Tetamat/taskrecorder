@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 // Initial page content
 const initialContent = `
   <button onclick="showPage('project')">Project</button>
@@ -13,9 +15,17 @@ function showPage(page) {
     // ... other page content ...
   };
 
+  // Create a back button for dynamic pages
+  const backButton = `<button onclick="goBack()">Back</button>`;
+
   // Update the content div
   const contentDiv = document.getElementById('content');
-  contentDiv.innerHTML = pageContent[page];
+  contentDiv.innerHTML = backButton + pageContent[page];
+}
+
+// Function to go back to the initial page
+function goBack() {
+  document.getElementById('content').innerHTML = initialContent;
 }
 
 // Initially, show the initial page
