@@ -1,0 +1,34 @@
+// example data records for sections
+{
+    "Проект": {
+        "sectionID": "SectionID1",
+        "Available": ["TaskID1", "TaskID2", "TaskID3"],
+        "In Progress": ["TaskID4", "TaskID5", "TaskID6"]
+    },
+    "Снабдяване": 
+    {   
+        "sectionID": "SectionID2",
+        "Available": ["TaskID7", "TaskID8", "TaskID9"],
+        "In Progress": ["TaskID10", "TaskID11", "TaskID12"]
+    }
+    // ... other sections
+}
+
+// Example for tasks
+{
+    "TaskID1": {
+        "title": "Task 1",
+        "description": "Description for Task 1",
+        "sections": ["SectionID1", "SectionID2" ],
+        "availableSection": "SectionID3",
+        "currentSection": "SectionID4",
+    },
+    "TaskID2": {
+        "title": "Task 2",
+        "description": "Description for Task 2",
+        "sections": ["SectionID1", "SectionID3" ],
+        "availableSection": "SectionID6",
+        "currentSection": "SectionID4",
+    }
+    // ... other tasks
+}
